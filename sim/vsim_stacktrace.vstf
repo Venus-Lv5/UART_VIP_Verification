@@ -1,0 +1,266 @@
+# Current time Sun Jul  6 23:18:44 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff27a2bcd: './../vip/uart_vip/uart_driver.sv:48'
+# 1    0x00007feff21d5c38: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 2    0x00007feff21d2fc7: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 3    0x0000000000e73572: '<unknown (@0xe73572)>'
+# 4    0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 5    0x000000000049227e: '<unknown (@0x49227e)>'
+# 6    0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 7    0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 8    0x0000000000a53281: '<unknown (@0xa53281)>'
+# 9    0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 10   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 11   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 12   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 13   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 14   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 15   0x000000000125329f: '<unknown (@0x125329f)>'
+# 16   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 17   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 18   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 19   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 20   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
+# Current time Sun Jul  6 23:25:32 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff27a2b2d: './../vip/uart_vip/uart_driver.sv:48'
+# 1    0x00007feff21d5bf8: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 2    0x00007feff21d2f87: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 3    0x0000000000e73572: '<unknown (@0xe73572)>'
+# 4    0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 5    0x000000000049227e: '<unknown (@0x49227e)>'
+# 6    0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 7    0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 8    0x0000000000a53281: '<unknown (@0xa53281)>'
+# 9    0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 10   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 11   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 12   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 13   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 14   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 15   0x000000000125329f: '<unknown (@0x125329f)>'
+# 16   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 17   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 18   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 19   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 20   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
+# Current time Sun Jul  6 23:29:41 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff27a2b7d: './../vip/uart_vip/uart_driver.sv:48'
+# 1    0x00007feff21d5c28: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 2    0x00007feff21d2fb7: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 3    0x0000000000e73572: '<unknown (@0xe73572)>'
+# 4    0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 5    0x000000000049227e: '<unknown (@0x49227e)>'
+# 6    0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 7    0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 8    0x0000000000a53281: '<unknown (@0xa53281)>'
+# 9    0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 10   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 11   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 12   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 13   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 14   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 15   0x000000000125329f: '<unknown (@0x125329f)>'
+# 16   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 17   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 18   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 19   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 20   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
+# Current time Sun Jul  6 23:32:03 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff27a2bbd: './../vip/uart_vip/uart_driver.sv:48'
+# 1    0x00007feff21d5c18: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 2    0x00007feff21d2fa7: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 3    0x0000000000e73572: '<unknown (@0xe73572)>'
+# 4    0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 5    0x000000000049227e: '<unknown (@0x49227e)>'
+# 6    0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 7    0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 8    0x0000000000a53281: '<unknown (@0xa53281)>'
+# 9    0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 10   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 11   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 12   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 13   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 14   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 15   0x000000000125329f: '<unknown (@0x125329f)>'
+# 16   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 17   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 18   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 19   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 20   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
+# Current time Sun Jul  6 23:49:01 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff27a2c4d: './../vip/uart_vip/uart_driver.sv:48'
+# 1    0x00007feff21d5cc8: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 2    0x00007feff21d3057: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 3    0x0000000000e73572: '<unknown (@0xe73572)>'
+# 4    0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 5    0x000000000049227e: '<unknown (@0x49227e)>'
+# 6    0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 7    0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 8    0x0000000000a53281: '<unknown (@0xa53281)>'
+# 9    0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 10   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 11   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 12   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 13   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 14   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 15   0x000000000125329f: '<unknown (@0x125329f)>'
+# 16   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 17   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 18   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 19   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 20   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
+# Current time Sun Jul  6 23:53:41 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff27a39cd: './../vip/uart_vip/uart_driver.sv:48'
+# 1    0x00007feff21d5ee8: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 2    0x00007feff21d3277: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 3    0x0000000000e73572: '<unknown (@0xe73572)>'
+# 4    0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 5    0x000000000049227e: '<unknown (@0x49227e)>'
+# 6    0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 7    0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 8    0x0000000000a53281: '<unknown (@0xa53281)>'
+# 9    0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 10   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 11   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 12   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 13   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 14   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 15   0x000000000125329f: '<unknown (@0x125329f)>'
+# 16   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 17   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 18   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 19   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 20   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
+# Current time Tue Jul  8 21:39:22 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff2885c2e: './../tb/uart_scoreboard.sv:113'
+# 1    0x00007feff288832c: './../tb/uart_scoreboard.sv:155'
+# 2    0x00007feff2884623: './../tb/uart_scoreboard.sv:58'
+# 3    0x00007feff28847fc: './../tb/uart_scoreboard.sv:55'
+# 4    0x00007feff288f4f4: './../tb/uart_scoreboard.sv:2'
+# 5    0x00007feff27bc324: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/tlm1/uvm_tlm_ifs.svh:213'
+# 6    0x00007feff26f764a: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/tlm1/uvm_analysis_port.svh:76'
+# 7    0x00007feff26f79e4: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/tlm1/uvm_analysis_port.svh:70'
+# 8    0x00007feff28429a8: './../vip/uart_vip/uart_monitor.sv:99'
+# 9    0x00007feff2840ef4: './../vip/uart_vip/uart_monitor.sv:42'
+# 10   0x00007feff2312928: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 11   0x00007feff230fcb7: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 12   0x0000000000e73572: '<unknown (@0xe73572)>'
+# 13   0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 14   0x000000000049227e: '<unknown (@0x49227e)>'
+# 15   0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 16   0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 17   0x0000000000a53281: '<unknown (@0xa53281)>'
+# 18   0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 19   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 20   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 21   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 22   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 23   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 24   0x000000000125329f: '<unknown (@0x125329f)>'
+# 25   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 26   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 27   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 28   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 29   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
+# Current time Tue Jul  8 21:41:00 2025
+# Program = vsim
+# Id = "10.6d_1"
+# Version = "2018.04"
+# Date = "Apr 11 2018"
+# Platform = linux_x86_64
+# Signature = 5d0396e3c04a0c9cca2ed3b42c497a31
+# 0    0x00007feff28a5c2e: './../tb/uart_scoreboard.sv:113'
+# 1    0x00007feff28a832c: './../tb/uart_scoreboard.sv:155'
+# 2    0x00007feff28a4623: './../tb/uart_scoreboard.sv:58'
+# 3    0x00007feff28a47fc: './../tb/uart_scoreboard.sv:55'
+# 4    0x00007feff28af4f4: './../tb/uart_scoreboard.sv:2'
+# 5    0x00007feff27dc324: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/tlm1/uvm_tlm_ifs.svh:213'
+# 6    0x00007feff271764a: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/tlm1/uvm_analysis_port.svh:76'
+# 7    0x00007feff27179e4: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/tlm1/uvm_analysis_port.svh:70'
+# 8    0x00007feff28629a8: './../vip/uart_vip/uart_monitor.sv:99'
+# 9    0x00007feff2860ef4: './../vip/uart_vip/uart_monitor.sv:42'
+# 10   0x00007feff2332928: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_common_phases.svh:269'
+# 11   0x00007feff232fcb7: '/ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_task_phase.svh:152'
+# 12   0x0000000000e73572: '<unknown (@0xe73572)>'
+# 13   0x00000000005c869e: '<unknown (@0x5c869e)>'
+# 14   0x000000000049227e: '<unknown (@0x49227e)>'
+# 15   0x00000000005fdb55: '<unknown (@0x5fdb55)>'
+# 16   0x0000000000a4f28b: '<unknown (@0xa4f28b)>'
+# 17   0x0000000000a53281: '<unknown (@0xa53281)>'
+# 18   0x0000000000a549fe: '<unknown (@0xa549fe)>'
+# 19   0x00000000011ad4ed: '<unknown (@0x11ad4ed)>'
+# 20   0x00000000011b1946: '<unknown (@0x11b1946)>'
+# 21   0x00000000011b3031: '<unknown (@0x11b3031)>'
+# 22   0x00000000011b3396: '<unknown (@0x11b3396)>'
+# 23   0x0000000000e5bdbb: '<unknown (@0xe5bdbb)>'
+# 24   0x000000000125329f: '<unknown (@0x125329f)>'
+# 25   0x00000000012a6e07: '<unknown (@0x12a6e07)>'
+# 26   0x0000000001269d07: '<unknown (@0x1269d07)>'
+# 27   0x0000000001269fe9: '<unknown (@0x1269fe9)>'
+# 28   0x00000000010c3856: '<unknown (@0x10c3856)>'
+# 29   0x0000000000a2b506: '<unknown (@0xa2b506)>'
+# End of Stack Trace
+
+
