@@ -1,0 +1,1892 @@
+﻿Total Items,612,,,,,,,,,
+Pass Items,612,,,,,,,,,
+Fail Items,0,,,,,,,,,
+NY Items,0,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Section,Main Title,Description,Testname,Priority,Method,Owner,Status,Milestone,Remark
+,1,Resgister test,,,,,Huy,,,
+,1.1,Read default value,"Use uvm_reg_hw_reset_seq from UVM RAL to check the default value of each register.
+Pass condition:
+Default value of each register matching with value mention in spec",reg_default_test,High,UVM_RAL,Huy,PASS,ver 20250703,
+,1.2,Write and read value check,"Use uvm_reg_bit_bash_seq from UVM RAL to check read, write value of each register.
+Pass condition:
+Value of each register matching with writen value ",reg_rw_test,High,UVM_RAL,Huy,PASS,ver 20250703,
+,1.3,Write and read value of reserved region check,"Write a random value and read the random register with offset from 0x020 to 0x3FF
+Pass condition: Check that the values are 32'hFFFFFFFF and HRESP is triggered",reg_rsvd_test,High,UVM_RAL,Huy,PASS,ver 20250703,
+,1.4,Write and read value of R/W1C resgister,"-Write 1 to parity_error_status bit of FSR to clear
+- Configure the DUT and the UART VIP with different parity types.
+- Transmit 1 data frame from uart_vif to dut, wait transfer done, read FSR first time
+-Write 1 to parity_error_status bit of FSR to clear
+-Read FSR secondary time
+Pass condition:
+-The parity_error_status bit = 1 at the first read.
+-The parity_error_status bit = 0 at the secondary read.",reg_w1c_test,High,UVM_RAL,Huy,PASS,ver 20250703,"Original RTL and RTL ver 2.1: Parity_error_status bit is not asserted when DUT detects a parity error
+RTL ver2.2: Fixed this bug"
+,2,Check oversampling combined with baud rate.,,,,,,,,
+13xOverSampling,2.1,2400 baudrate,"-Randomize config parameters, assert oversampling = x13, baudrate = 2400, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_2400_test,High,Directed,Huy,PASS,ver 20250704,
+,2.2,4800 baudrate,"-Randomize config parameters, assert oversampling = x13, baudrate = 4800, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_4800_test,High,Directed,Huy,PASS,ver 20250704,
+,2.3,9600 baudrate,"-Randomize config parameters, assert oversampling = x13, baudrate = 9600, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_9600_test,High,Directed,Huy,PASS,ver 20250704,
+,2.4,19200 baudrate,"-Randomize config parameters, assert oversampling = x13, baudrate = 19200, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_19200_test,High,Directed,Huy,PASS,ver 20250704,
+,2.5,38400 baudrate,"-Randomize config parameters, assert oversampling = x13, baudrate = 38400, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_38400_test,High,Directed,Huy,PASS,ver 20250704,
+,2.6,76800 baudrate,"-Randomize config parameters, assert oversampling = x13, baudrate = 76800, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_76800_test,High,Directed,Huy,PASS,ver 20250704,
+,2.7,115200 baudrate,"-Randomize config parameters, assert oversampling = x13, baudrate = 115200, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_115200_test,High,Directed,Huy,PASS,ver 20250704,
+,2.8,Custom baudrate,"-Randomize config parameters, assert oversampling = x13, random baudrate, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x13_custom_test,High,Directed,Huy,PASS,ver 20250704,
+16xOverSampling,2.9,2400 baudrate,"-Randomize config parameters, assert oversampling = x16, baudrate = 2400, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_2400_test,High,Directed,Huy,PASS,ver 20250704,
+,2.10,4800 baudrate,"-Randomize config parameters, assert oversampling = x16, baudrate = 4800, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_4800_test,High,Directed,Huy,PASS,ver 20250704,
+,2.11,9600 baudrate,"-Randomize config parameters, assert oversampling = x16, baudrate = 9600, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_9600_test,High,Directed,Huy,PASS,ver 20250704,
+,2.12,19200 baudrate,"-Randomize config parameters, assert oversampling = x16, baudrate = 19200, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_19200_test,High,Directed,Huy,PASS,ver 20250704,
+,2.13,38400 baudrate,"-Randomize config parameters, assert oversampling = x16, baudrate = 38400, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_38400_test,High,Directed,Huy,PASS,ver 20250704,
+,2.14,76800 baudrate,"-Randomize config parameters, assert oversampling = x16, baudrate = 76800, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_76800_test,High,Directed,Huy,PASS,ver 20250704,
+,2.15,115200 baudrate,"-Randomize config parameters, assert oversampling = x16, baudrate = 115200, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_115200_test,High,Directed,Huy,PASS,ver 20250704,
+,2.16,Custom baudrate,"-Randomize config parameters, assert oversampling = x16, random baudrate, and mode = FULL. 
+-Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame",x16_custom_test,High,Directed,Huy,PASS,ver 20250704,
+,3,"Common setting (data x parity x stop), combine 
+with all baudrate",,,,,,,,
+,3.1,5 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_5_none_1_test
+transmit_4800_5_none_1_test
+transmit_9600_5_none_1_test
+transmit_19200_5_none_1_test
+transmit_38400_5_none_1_test
+transmit_76800_5_none_1_test
+transmit_115200_5_none_1_test",,,,,ver20250708,
+,3.2,5 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_5_none_2_test
+transmit_4800_5_none_2_test
+transmit_9600_5_none_2_test
+transmit_19200_5_none_2_test
+transmit_38400_5_none_2_test
+transmit_76800_5_none_2_test
+transmit_115200_5_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.3,5 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_5_odd_1_test
+transmit_4800_5_odd_1_test
+transmit_9600_5_odd_1_test
+transmit_19200_5_odd_1_test
+transmit_38400_5_odd_1_test
+transmit_76800_5_odd_1_test
+transmit_115200_5_odd_1_test
+transmit_custom_5_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.4,5 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_5_odd_2_test
+transmit_4800_5_odd_2_test
+transmit_9600_5_odd_2_test
+transmit_19200_5_odd_2_test
+transmit_38400_5_odd_2_test
+transmit_76800_5_odd_2_test
+transmit_115200_5_odd_2_test
+transmit_custom_5_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.5,5 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_5_even_1_test
+transmit_4800_5_even_1_test
+transmit_9600_5_even_1_test
+transmit_19200_5_even_1_test
+transmit_38400_5_even_1_test
+transmit_76800_5_even_1_test
+transmit_115200_5_even_1_test
+transmit_custom_5_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.6,5 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_5_even_2_test
+transmit_4800_5_even_2_test
+transmit_9600_5_even_2_test
+transmit_19200_5_even_2_test
+transmit_38400_5_even_2_test
+transmit_76800_5_even_2_test
+transmit_115200_5_even_2_test
+transmit_custom_5_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.7,6 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 6, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_6_none_1_test
+transmit_4800_6_none_1_test
+transmit_9600_6_none_1_test
+transmit_19200_6_none_1_test
+transmit_38400_6_none_1_test
+transmit_76800_6_none_1_test
+transmit_115200_6_none_1_test
+transmit_custom_6_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.8,6 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 6, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_6_none_2_test
+transmit_4800_6_none_2_test
+transmit_9600_6_none_2_test
+transmit_19200_6_none_2_test
+transmit_38400_6_none_2_test
+transmit_76800_6_none_2_test
+transmit_115200_6_none_2_test
+transmit_custom_5_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.9,6 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 6, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_6_odd_1_test
+transmit_4800_6_odd_1_test
+transmit_9600_6_odd_1_test
+transmit_19200_6_odd_1_test
+transmit_38400_6_odd_1_test
+transmit_76800_6_odd_1_test
+transmit_115200_6_odd_1_test
+transmit_custom_6_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.10,6 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 6, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_6_odd_2_test
+transmit_4800_6_odd_2_test
+transmit_9600_6_odd_2_test
+transmit_19200_6_odd_2_test
+transmit_38400_6_odd_2_test
+transmit_76800_6_odd_2_test
+transmit_115200_6_odd_2_test
+transmit_custom_6_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.11,6 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 6, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_6_even_1_test
+transmit_4800_6_even_1_test
+transmit_9600_6_even_1_test
+transmit_19200_6_even_1_test
+transmit_38400_6_even_1_test
+transmit_76800_6_even_1_test
+transmit_115200_6_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.12,6 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 6, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_6_even_2_test
+transmit_4800_6_even_2_test
+transmit_9600_6_even_2_test
+transmit_19200_6_even_2_test
+transmit_38400_6_even_2_test
+transmit_76800_6_even_2_test
+transmit_115200_6_even_2_test
+transmit_custom_6_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.13,7 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 7, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_7_none_1_test
+transmit_4800_7_none_1_test
+transmit_9600_7_none_1_test
+transmit_19200_7_none_1_test
+transmit_38400_7_none_1_test
+transmit_76800_7_none_1_test
+transmit_115200_7_none_1_test
+transmit_custom_7_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.14,7 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 7, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_7_none_2_test
+transmit_4800_7_none_2_test
+transmit_9600_7_none_2_test
+transmit_19200_7_none_2_test
+transmit_38400_7_none_2_test
+transmit_76800_7_none_2_test
+transmit_115200_7_none_2_test
+transmit_custom_7_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.15,7 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 7, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_7_odd_1_test
+transmit_4800_7_odd_1_test
+transmit_9600_7_odd_1_test
+transmit_19200_7_odd_1_test
+transmit_38400_7_odd_1_test
+transmit_76800_7_odd_1_test
+transmit_115200_7_odd_1_test
+transmit_custom_7_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.16,7 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 7, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_7_odd_2_test
+transmit_4800_7_odd_2_test
+transmit_9600_7_odd_2_test
+transmit_19200_7_odd_2_test
+transmit_38400_7_odd_2_test
+transmit_76800_7_odd_2_test
+transmit_115200_7_odd_2_test
+transmit_custom_7_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.17,7 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 7, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_7_even_1_test
+transmit_4800_7_even_1_test
+transmit_9600_7_even_1_test
+transmit_19200_7_even_1_test
+transmit_38400_7_even_1_test
+transmit_76800_7_even_1_test
+transmit_115200_7_even_1_test
+transmit_custom_7_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.18,7 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 7, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_7_even_2_test
+transmit_4800_7_even_2_test
+transmit_9600_7_even_2_test
+transmit_19200_7_even_2_test
+transmit_38400_7_even_2_test
+transmit_76800_7_even_2_test
+transmit_115200_7_even_2_test
+transmit_custom_7_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.19,8 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 8, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_8_none_1_test
+transmit_4800_8_none_1_test
+transmit_9600_8_none_1_test
+transmit_19200_8_none_1_test
+transmit_38400_8_none_1_test
+transmit_76800_8_none_1_test
+transmit_115200_8_none_1_test
+transmit_custom_8_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.20,8 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 8, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_8_none_2_test
+transmit_4800_8_none_2_test
+transmit_9600_8_none_2_test
+transmit_19200_8_none_2_test
+transmit_38400_8_none_2_test
+transmit_76800_8_none_2_test
+transmit_115200_8_none_2_test
+transmit_custom_8_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.21,8 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 8, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_8_odd_1_test
+transmit_4800_8_odd_1_test
+transmit_9600_8_odd_1_test
+transmit_19200_8_odd_1_test
+transmit_38400_8_odd_1_test
+transmit_76800_8_odd_1_test
+transmit_115200_8_odd_1_test
+transmit_custom_8_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, "
+,3.22,8 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 8, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_8_odd_2_test
+transmit_4800_8_odd_2_test
+transmit_9600_8_odd_2_test
+transmit_19200_8_odd_2_test
+transmit_38400_8_odd_2_test
+transmit_76800_8_odd_2_test
+transmit_115200_8_odd_2_test
+transmit_custom_8_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl,"
+,3.23,8 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 8, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_8_even_1_test
+transmit_4800_8_even_1_test
+transmit_9600_8_even_1_test
+transmit_19200_8_even_1_test
+transmit_38400_8_even_1_test
+transmit_76800_8_even_1_test
+transmit_115200_8_even_1_test
+transmit_custom_8_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, "
+,3.24,8 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 8, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = RX for uart_vip
+-Write 3 data values to the TBR and wait until the UART VIP completes reception.
+-Check that the transmitted and received data   match.
+Pass conditon:
+Transmit data frame is same as receive data frame","transmit_2400_8_even_2_test
+transmit_4800_8_even_2_test
+transmit_9600_8_even_2_test
+transmit_19200_8_even_2_test
+transmit_38400_8_even_2_test
+transmit_76800_8_even_2_test
+transmit_115200_8_even_2_test
+transmit_custom_8_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, "
+,3.25,5 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_5_none_1_test
+receive_4800_5_none_1_test
+receive_9600_5_none_1_test
+receive_19200_5_none_1_test
+receive_38400_5_none_1_test
+receive_76800_5_none_1_test
+receive_115200_5_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.26,5 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_5_none_2_test
+receive_4800_5_none_2_test
+receive_9600_5_none_2_test
+receive_19200_5_none_2_test
+receive_38400_5_none_2_test
+receive_76800_5_none_2_test
+receive_115200_5_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.27,5 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_5_odd_1_test
+receive_4800_5_odd_1_test
+receive_9600_5_odd_1_test
+receive_19200_5_odd_1_test
+receive_38400_5_odd_1_test
+receive_76800_5_odd_1_test
+receive_115200_5_odd_1_test
+receive_custom_5_odd_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.28,5 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_5_odd_2_test
+receive_4800_5_odd_2_test
+receive_9600_5_odd_2_test
+receive_19200_5_odd_2_test
+receive_38400_5_odd_2_test
+receive_76800_5_odd_2_test
+receive_115200_5_odd_2_test
+receive_custom_5_odd_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.29,5 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_5_even_1_test
+receive_4800_5_even_1_test
+receive_9600_5_even_1_test
+receive_19200_5_even_1_test
+receive_38400_5_even_1_test
+receive_76800_5_even_1_test
+receive_115200_5_even_1_test
+receive_custom_5_even_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.30,5 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width = 5, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_5_even_2_test
+receive_4800_5_even_2_test
+receive_9600_5_even_2_test
+receive_19200_5_even_2_test
+receive_38400_5_even_2_test
+receive_76800_5_even_2_test
+receive_115200_5_even_2_test
+receive_custom_5_even_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.31,6 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_6_none_1_test
+receive_4800_6_none_1_test
+receive_9600_6_none_1_test
+receive_19200_6_none_1_test
+receive_38400_6_none_1_test
+receive_76800_6_none_1_test
+receive_115200_6_none_1_test
+receive_custom_6_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.32,6 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_6_none_2_test
+receive_4800_6_none_2_test
+receive_9600_6_none_2_test
+receive_19200_6_none_2_test
+receive_38400_6_none_2_test
+receive_76800_6_none_2_test
+receive_115200_6_none_2_test
+receive_custom_5_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.33,6 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_6_odd_1_test
+receive_4800_6_odd_1_test
+receive_9600_6_odd_1_test
+receive_19200_6_odd_1_test
+receive_38400_6_odd_1_test
+receive_76800_6_odd_1_test
+receive_115200_6_odd_1_test
+receive_custom_6_odd_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.34,6 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_6_odd_2_test
+receive_4800_6_odd_2_test
+receive_9600_6_odd_2_test
+receive_19200_6_odd_2_test
+receive_38400_6_odd_2_test
+receive_76800_6_odd_2_test
+receive_115200_6_odd_2_test
+receive_custom_6_odd_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.35,6 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_6_even_1_test
+receive_4800_6_even_1_test
+receive_9600_6_even_1_test
+receive_19200_6_even_1_test
+receive_38400_6_even_1_test
+receive_76800_6_even_1_test
+receive_115200_6_even_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.36,6 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_6_even_2_test
+receive_4800_6_even_2_test
+receive_9600_6_even_2_test
+receive_19200_6_even_2_test
+receive_38400_6_even_2_test
+receive_76800_6_even_2_test
+receive_115200_6_even_2_test
+receive_custom_6_even_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.37,7 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_7_none_1_test
+receive_4800_7_none_1_test
+receive_9600_7_none_1_test
+receive_19200_7_none_1_test
+receive_38400_7_none_1_test
+receive_76800_7_none_1_test
+receive_115200_7_none_1_test
+receive_custom_7_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.38,7 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_7_none_2_test
+receive_4800_7_none_2_test
+receive_9600_7_none_2_test
+receive_19200_7_none_2_test
+receive_38400_7_none_2_test
+receive_76800_7_none_2_test
+receive_115200_7_none_2_test
+receive_custom_7_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.39,7 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_7_odd_1_test
+receive_4800_7_odd_1_test
+receive_9600_7_odd_1_test
+receive_19200_7_odd_1_test
+receive_38400_7_odd_1_test
+receive_76800_7_odd_1_test
+receive_115200_7_odd_1_test
+receive_custom_7_odd_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.40,7 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_7_odd_2_test
+receive_4800_7_odd_2_test
+receive_9600_7_odd_2_test
+receive_19200_7_odd_2_test
+receive_38400_7_odd_2_test
+receive_76800_7_odd_2_test
+receive_115200_7_odd_2_test
+receive_custom_7_odd_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.41,7 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_7_even_1_test
+receive_4800_7_even_1_test
+receive_9600_7_even_1_test
+receive_19200_7_even_1_test
+receive_38400_7_even_1_test
+receive_76800_7_even_1_test
+receive_115200_7_even_1_test
+receive_custom_7_even_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.42,7 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_7_even_2_test
+receive_4800_7_even_2_test
+receive_9600_7_even_2_test
+receive_19200_7_even_2_test
+receive_38400_7_even_2_test
+receive_76800_7_even_2_test
+receive_115200_7_even_2_test
+receive_custom_7_even_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.43,8 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_8_none_1_test
+receive_4800_8_none_1_test
+receive_9600_8_none_1_test
+receive_19200_8_none_1_test
+receive_38400_8_none_1_test
+receive_76800_8_none_1_test
+receive_115200_8_none_1_test
+receive_custom_8_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.44,8 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_8_none_2_test
+receive_4800_8_none_2_test
+receive_9600_8_none_2_test
+receive_19200_8_none_2_test
+receive_38400_8_none_2_test
+receive_76800_8_none_2_test
+receive_115200_8_none_2_test
+receive_custom_8_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.45,8 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_8_odd_1_test
+receive_4800_8_odd_1_test
+receive_9600_8_odd_1_test
+receive_19200_8_odd_1_test
+receive_38400_8_odd_1_test
+receive_76800_8_odd_1_test
+receive_115200_8_odd_1_test
+receive_custom_8_odd_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.46,8 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_8_odd_2_test
+receive_4800_8_odd_2_test
+receive_9600_8_odd_2_test
+receive_19200_8_odd_2_test
+receive_38400_8_odd_2_test
+receive_76800_8_odd_2_test
+receive_115200_8_odd_2_test
+receive_custom_8_odd_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.47,8 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_8_even_1_test
+receive_4800_8_even_1_test
+receive_9600_8_even_1_test
+receive_19200_8_even_1_test
+receive_38400_8_even_1_test
+receive_76800_8_even_1_test
+receive_115200_8_even_1_test
+receive_custom_8_even_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.48,8 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = TX for uart_vip
+-Transmit 3 data values from uart_vip to dut, wait transfer done.
+-Check data frame transfer and read value of RBR, compare them
+Pass conditon:
+Transmit data frame is same as RBR value","receive_2400_8_even_2_test
+receive_4800_8_even_2_test
+receive_9600_8_even_2_test
+receive_19200_8_even_2_test
+receive_38400_8_even_2_test
+receive_76800_8_even_2_test
+receive_115200_8_even_2_test
+receive_custom_8_even_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.49,5 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  5, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_5_none_1_test
+full_4800_5_none_1_test
+full_9600_5_none_1_test
+full_19200_5_none_1_test
+full_38400_5_none_1_test
+full_76800_5_none_1_test
+full_115200_5_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.50,5 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  5, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_5_none_2_test
+full_4800_5_none_2_test
+full_9600_5_none_2_test
+full_19200_5_none_2_test
+full_38400_5_none_2_test
+full_76800_5_none_2_test
+full_115200_5_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.51,5 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  5, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_5_odd_1_test
+full_4800_5_odd_1_test
+full_9600_5_odd_1_test
+full_19200_5_odd_1_test
+full_38400_5_odd_1_test
+full_76800_5_odd_1_test
+full_115200_5_odd_1_test
+full_custom_5_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.52,5 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  5, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_5_odd_2_test
+full_4800_5_odd_2_test
+full_9600_5_odd_2_test
+full_19200_5_odd_2_test
+full_38400_5_odd_2_test
+full_76800_5_odd_2_test
+full_115200_5_odd_2_test
+full_custom_5_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.53,5 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  5, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_5_even_1_test
+full_4800_5_even_1_test
+full_9600_5_even_1_test
+full_19200_5_even_1_test
+full_38400_5_even_1_test
+full_76800_5_even_1_test
+full_115200_5_even_1_test
+full_custom_5_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.54,5 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  5, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_5_even_2_test
+full_4800_5_even_2_test
+full_9600_5_even_2_test
+full_19200_5_even_2_test
+full_38400_5_even_2_test
+full_76800_5_even_2_test
+full_115200_5_even_2_test
+full_custom_5_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.55,6 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_6_none_1_test
+full_4800_6_none_1_test
+full_9600_6_none_1_test
+full_19200_6_none_1_test
+full_38400_6_none_1_test
+full_76800_6_none_1_test
+full_115200_6_none_1_test
+full_custom_6_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.56,6 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_6_none_2_test
+full_4800_6_none_2_test
+full_9600_6_none_2_test
+full_19200_6_none_2_test
+full_38400_6_none_2_test
+full_76800_6_none_2_test
+full_115200_6_none_2_test
+full_custom_5_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.57,6 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_6_odd_1_test
+full_4800_6_odd_1_test
+full_9600_6_odd_1_test
+full_19200_6_odd_1_test
+full_38400_6_odd_1_test
+full_76800_6_odd_1_test
+full_115200_6_odd_1_test
+full_custom_6_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.58,6 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_6_odd_2_test
+full_4800_6_odd_2_test
+full_9600_6_odd_2_test
+full_19200_6_odd_2_test
+full_38400_6_odd_2_test
+full_76800_6_odd_2_test
+full_115200_6_odd_2_test
+full_custom_6_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.59,6 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_6_even_1_test
+full_4800_6_even_1_test
+full_9600_6_even_1_test
+full_19200_6_even_1_test
+full_38400_6_even_1_test
+full_76800_6_even_1_test
+full_115200_6_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.60,6 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  6, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_6_even_2_test
+full_4800_6_even_2_test
+full_9600_6_even_2_test
+full_19200_6_even_2_test
+full_38400_6_even_2_test
+full_76800_6_even_2_test
+full_115200_6_even_2_test
+full_custom_6_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.61,7 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_7_none_1_test
+full_4800_7_none_1_test
+full_9600_7_none_1_test
+full_19200_7_none_1_test
+full_38400_7_none_1_test
+full_76800_7_none_1_test
+full_115200_7_none_1_test
+full_custom_7_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.62,7 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_7_none_2_test
+full_4800_7_none_2_test
+full_9600_7_none_2_test
+full_19200_7_none_2_test
+full_38400_7_none_2_test
+full_76800_7_none_2_test
+full_115200_7_none_2_test
+full_custom_7_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.63,7 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_7_odd_1_test
+full_4800_7_odd_1_test
+full_9600_7_odd_1_test
+full_19200_7_odd_1_test
+full_38400_7_odd_1_test
+full_76800_7_odd_1_test
+full_115200_7_odd_1_test
+full_custom_7_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.64,7 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_7_odd_2_test
+full_4800_7_odd_2_test
+full_9600_7_odd_2_test
+full_19200_7_odd_2_test
+full_38400_7_odd_2_test
+full_76800_7_odd_2_test
+full_115200_7_odd_2_test
+full_custom_7_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.65,7 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_7_even_1_test
+full_4800_7_even_1_test
+full_9600_7_even_1_test
+full_19200_7_even_1_test
+full_38400_7_even_1_test
+full_76800_7_even_1_test
+full_115200_7_even_1_test
+full_custom_7_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.66,7 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  7, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_7_even_2_test
+full_4800_7_even_2_test
+full_9600_7_even_2_test
+full_19200_7_even_2_test
+full_38400_7_even_2_test
+full_76800_7_even_2_test
+full_115200_7_even_2_test
+full_custom_7_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,3.67,8 bits x none x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = NONE, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_8_none_1_test
+full_4800_8_none_1_test
+full_9600_8_none_1_test
+full_19200_8_none_1_test
+full_38400_8_none_1_test
+full_76800_8_none_1_test
+full_115200_8_none_1_test
+full_custom_8_none_1_test",High,Directed,Huy,PASS,ver20250708,
+,3.68,8 bits x none x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = NONE, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_8_none_2_test
+full_4800_8_none_2_test
+full_9600_8_none_2_test
+full_19200_8_none_2_test
+full_38400_8_none_2_test
+full_76800_8_none_2_test
+full_115200_8_none_2_test
+full_custom_8_none_2_test",High,Directed,Huy,PASS,ver20250708,
+,3.69,8 bits x odd x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = ODD, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_8_odd_1_test
+full_4800_8_odd_1_test
+full_9600_8_odd_1_test
+full_19200_8_odd_1_test
+full_38400_8_odd_1_test
+full_76800_8_odd_1_test
+full_115200_8_odd_1_test
+full_custom_8_odd_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, "
+,3.70,8 bits x odd x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = ODD, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_8_odd_2_test
+full_4800_8_odd_2_test
+full_9600_8_odd_2_test
+full_19200_8_odd_2_test
+full_38400_8_odd_2_test
+full_76800_8_odd_2_test
+full_115200_8_odd_2_test
+full_custom_8_odd_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl,"
+,3.71,8 bits x even x 1 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = EVEN, stop_width = 1, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_8_even_1_test
+full_4800_8_even_1_test
+full_9600_8_even_1_test
+full_19200_8_even_1_test
+full_38400_8_even_1_test
+full_76800_8_even_1_test
+full_115200_8_even_1_test
+full_custom_8_even_1_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, "
+,3.72,8 bits x even x 2 stop,"-Configure dut and uart_vip randomize parameters, assert data_width =  8, parity_type = EVEN, stop_width = 2, combine with all baudrate in spec and custom baudrate
+-Configure mode = FULL for uart_vip
+Transmit 3 data frame from dut to uart_vip and uart_vip to dut
+-Check that the transmitted and received data on both sides match.
+Pass conditon:
+Transmit data frame is same as receive data frame","full_2400_8_even_2_test
+full_4800_8_even_2_test
+full_9600_8_even_2_test
+full_19200_8_even_2_test
+full_38400_8_even_2_test
+full_76800_8_even_2_test
+full_115200_8_even_2_test
+full_custom_8_even_2_test",High,Directed,Huy,PASS,ver20250708,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, "
+,4,Interrupt test,,,,,,,,
+,4.1,parity_error,"-Write 1 to en_parity_error of ISE to enable parity_error interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that parity_type is the same on both sides.
+-Transmit 1 data frame from uart_vip to dut, wait uart_dut transfer parrity done, read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Configure the DUT and UART VIP by randomizing parameters, and assert that parity_type is the different on both sides.
+-Transmit 1 data frame from uart_vip to dut, wait uart_dut transfer parrity done, read FSR and check interrupt second time
+Pass condition:
+In first time, error_parity_status = 0 and interrupt = 0
+In second time, error_parity_status = 1 and interrupt = 1",interrupt_parity_error_en_test,High,Directed,Huy,PASS,ver20250710,"Original RTL and RTL ver 2.1: Parity_error_status bit is not asserted and interrupt not rise when DUT detects a parity error
+RTL ver2.2: Fixed this bug"
+,4.2,disable parity_error,"-Write 0 to en_parity_error of ISE to disable parity_error interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that parity_type is the same on both sides.
+-Transmit 1 data frame from uart_vip to dut, wait uart_dut transfer parrity done, read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Configure the DUT and UART VIP by randomizing parameters, and assert that parity_type is the different on both sides.
+-Transmit 1 data frame from uart_vip to dut, wait uart_dut transfer parrity done, read FSR and check interrupt second time
+Pass condition:
+In first time, error_parity_status = 0 and interrupt = 0
+In second time, error_parity_status = 1 and interrupt = 0",interrupt_parity_error_dis_test,High,Directed,Huy,PASS,ver20250710,"Original RTL and RTL ver 2.1: Parity_error_status bit is not asserted and when DUT detects a parity error
+RTL ver2.2: Fixed this bug"
+,4.3,rx_fifo_empty,"-Write 1 to en_rx_fifo_empty of ISE to enable rx_fifo_empty interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides.
+-Transmit 1 data frame from uart_vip to dut, 
+-Read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Wait uart_vip transfer done, read FSR and check interrupt second time
+Pass condition:
+In first time, rx_empty_status = 0 and interrupt = 0
+In second time, rx_empty_status = 1 and interrupt = 1",interrupt_rx_empty_en_test,High,Directed,Huy,PASS,ver20250710,
+,4.4,disable rx_fifo_empty,"-Write 0 to en_rx_fifo_empty of ISE to disable rx_fifo_empty interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides.
+-Transmit 1 data frame from uart_vip to dut, 
+-Read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Wait uart_vip transfer done, read FSR and check interrupt second time
+Pass condition:
+In first time, rx_empty_status = 0 and interrupt = 0
+In second time, rx_empty_status = 1 and interrupt = 0",interrupt_rx_empty_dis_test,High,Directed,Huy,PASS,ver20250710,
+,4.5,rx_fifo_full,"-Write 1 to en_rx_fifo_full of ISE to enable rx_fifo_full interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides
+-Transmit 15 data frame from uart_vip to dut
+-Wait 15 data frame transfer done, read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Transmit 1 data frame from uart_vip to dut
+-Wait data transfer done, read FSR and check interrupt second time
+Pass condition:
+In first time, tx_empty_status = 0 and interrupt = 0
+In second time, tx_empty_status = 1 and interrupt = 1",interrupt_rx_full_en_test,High,Directed,Huy,PASS,ver20250710,
+,4.6,disable rx_fifo_full,"-Write 0 to en_rx_fifo_full of ISE to disable rx_fifo_full interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides
+-Transmit 15 data frame from uart_vip to dut
+-Wait 15 data frame transfer done, read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Transmit 1 data frame from uart_vip to dut
+-Wait data transfer done, read FSR and check interrupt second time
+Pass condition:
+In first time, tx_empty_status = 0 and interrupt = 0
+In second time, tx_empty_status = 1 and interrupt = 0",interrupt_rx_full_dis_test,High,Directed,Huy,PASS,ver20250710,
+,4.7,tx_fifo_empty,"-Write 1 to en_tx_fifo_empty of ISE to enable tx_fifo_empty interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides and BGE of LCR is 0
+-Write 2 random data to TBR
+-Read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-config BGE of LCR is 1
+-Wait uart_vip transfer done, read FSR and check interrupt second time
+Pass condition:
+In first time, tx_empty_status = 0 and interrupt = 0
+In second time, tx_empty_status = 1 and interrupt = 1",interrupt_tx_empty_en_test,High,Directed,Huy,PASS,ver20250710,
+,4.8,disable tx_fifo_empty,"-Write 0 to en_tx_fifo_empty of ISE to disable tx_fifo_empty interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides and BGE of LCR is 0
+-Write 2 random data to TBR
+-Read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-config BGE of LCR is 1
+-Wait uart_vip transfer done, read FSR and check interrupt second time
+Pass condition:
+In first time, tx_empty_status = 0 and interrupt = 0
+In second time, tx_empty_status = 1 and interrupt = 0",interrupt_tx_empty_dis_test,High,Directed,Huy,PASS,ver20250710,
+,4.9,tx_fifo_full,"-Write 1 to en_tx_fifo_full of ISE to enable tx_fifo_full interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides
+-Write 16 random data to TBR
+-Read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Write 1 random data to TBR
+-Read FSR and check interrupt second time
+Pass condition:
+In first time, tx_empty_status = 0 and interrupt = 0
+In second time, tx_empty_status = 1 and interrupt = 1",interrupt_tx_full_en_test,High,Directed,Huy,PASS,ver20250710,
+,4.10,disable tx_fifo_full,"-Write 0 to en_tx_fifo_full of ISE to disable tx_fifo_full interrupt
+Configure the DUT and UART VIP by randomizing parameters, and assert that config is the same on both sides
+-Write 16 random data to TBR
+-Read FSR and check interrupt first time
+-Write 1 to error_parity_status of FSR to clear
+-Write 1 random data to TBR
+-Read FSR and check interrupt second time
+Pass condition:
+In first time, tx_empty_status = 0 and interrupt = 0
+In second time, tx_empty_status = 1 and interrupt = 0",interrupt_tx_full_dis_test,High,Directed,Huy,PASS,ver20250710,
+,5,Dynamic config test,,,,,,,,
+,5.1,Transmit dynamic config,"-Configure the DUT and UART VIP by randomizing parameters, 
+-Transmit random data from dut to uart_vip
+-Wait transfer done, check transmit dataframe and receive dataframe
+-Reconfigure the DUT and UART VIP by randomizing parameters with values different from the previous configuration
+-Transmit random data from dut to uart_vip
+-Wait transfer done, check transmit dataframe and receive dataframe
+Pass condition:
+Transmit dataframe is same as receive dataframe",transmit_dynamic_config_test,Medium,Directed,Huy,PASS,ver20250710,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,5.2,Receive dynamic config,"-Configure the DUT and UART VIP by randomizing parameters, 
+-Transmit random data uart_vip to dut
+-Wait transfer done, check transmit dataframe and receive dataframe
+Reconfigure the DUT and UART VIP by randomizing parameters with values different from the previous configuration
+-Transmit random data from uart_vip to dut
+-Wait transfer done, check transmit dataframe and receive dataframe
+Pass condition:
+Transmit dataframe is same as receive dataframe",receive_dynamic_config_test,Medium,Directed,Huy,PASS,ver20250710,
+,5.3,Full dynamic config,"-Configure the DUT and UART VIP by randomizing parameters, 
+-Transmit random data from dut to uart_vip and from uart_vip to dut
+-Wait transfer done, check transmit dataframe and receive dataframe
+-Reconfigure the DUT and UART VIP by randomizing parameters with values different from the previous configuration
+-Transmit random data from dut to uart_vip and from uart_vip to dut
+-Wait transfer done, check transmit dataframe and receive dataframe
+Pass condition:
+Transmit dataframe is same as receive dataframe",full_dynamic_config_test,Medium,Directed,Huy,PASS,ver20250710,"Original RTL: Transmit with incorrect parity bit
+RTL ver 2.1: Fixed bug orginal rtl, calcuulate parity by 8 bit data in TBR
+RTL ver 2.2: Fixed bug orginal RTL and RTL ver2.1"
+,6,Error Ịnection test,,,,,,,,
+,6.1,Parity mismatch,"-Configure the DUT and UART VIP by randomizing parameters, 
+and assert that parity_type is the different on both sides.
+-Transmit random data from dut to uart_vip and from uart_vip to dut
+-Wait transfer done
+Pass condition:
+parity_error_status = 1 and uart_vip detect parity mismatch,
+",mismatch_parity_test,Medium,Directed,Huy,PASS,ver20250711,
+,6.2,Stop bit mismatch,"-Configure the DUT and UART VIP by randomizing parameters, 
+and assert that stop_width is the different on both sides.
+-Transmit random data from dut to uart_vip 
+-Wait transfer done
+Pass condition:
+uart_vip detect stop_width mismatch,",mismatch_stop_bit_test,Medium,Directed,Huy,PASS,ver20250711,
+,6.3,Data width mismatch,"-Configure the DUT and UART VIP by randomizing parameters, 
+and assert that data_width is the different on both sides.
+-Transmit random data from dut to uart_vip and from uart_vip to dut
+-Wait transfer done
+Pass condition:
+Transmit data and receive data mismatch
+parrity and stop_width can mismatch",mismatch_data_width_test,Medium,Directed,Huy,PASS,ver20250711,
+,6.4,Baudrate mismatch,"-Configure the DUT and UART VIP by randomizing parameters, 
+and assert that baudrate is the different on both sides.
+-Transmit random data from dut to uart_vip and from uart_vip to dut
+-Wait transfer done
+Pass condition:
+Transmit dataframe and receive dataframe is mismatch",mismatch_baudrate_test,Medium,Directed,Huy,PASS,ver20250711,
+,6.5,Write data when tx_fifo full,"-Configure the DUT and UART VIP by randomizing parameters, 
+-Write 17 random data to TBR with data != 0xFF
+-Write 1 data to TBR with data = 0xFF
+-Wait all transfer done, check data uart_vip received
+Pass condition:
+The UART VIP does not receive any data with the value 0xFF.",write_fifo_full_test,Medium,Directed,Huy,PASS,ver20250711,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
